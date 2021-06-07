@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<title>MedipPACS</title>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<script src="includeHTML.js"></script>
+		<script src="https://code.jquery.com/jquery-5.4.1.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('.outer-menu-item').hover(function() {
+					$(this).find('.inner-menu').show();
+				}, function() {
+					$(this).find('.inner-menu').hide();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!-- 페이지 전체를 감싸는 태그 -->
+		<div id="page-wrapper">
+			<!-- 헤더 -->
+			<div include-html="header.html"></div>
+			<header id="main-header-ad">
+				<hgroup>
+					<h1 class="master-title">이미지 Viewer</h1>
+				</hgroup>
+			</header>
+			<!-- 네비게이션 -->
+			<div id="main-navigation">
+				<div class="pull-left">
+					<ul class="outer-menu">
+						<li class="outer-menu-item">
+							<span class="menu-title">데이터베이스</span>
+							<ul class="inner-menu">
+								<li class="inner-menu-item"><a href="#">Database1</a></li>
+								<li class="inner-menu-item"><a href="#">Database2</a></li>
+								<li class="inner-menu-item"><a href="#">Database3</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 본문 -->
+			<div id="content">
+				<section id="main-section">
+                    <div class="pull-left">
+                        <h1>환자 정보</h1>
+                        <div class="container">
+                            <div class="item">환자 이름 : </div>
+                            <div class="item">AAA</div>
+                        </div>
+                        <div class="container">
+                            <div class="item">환자 ID : </div>
+                            <div class="item">111</div>
+                        </div>
+                        <div class="container">
+                            <div class="item">Modality : </div>
+                            <div class="item">CT</div>
+                        </div>
+                        <div class="container">
+                            <div class="item">Description : </div>
+                            <div class="item">Chest CT</div>
+                        </div>
+					</div>
+					<div class="pull-right">
+                        <h1>이미지 Viewer</h1>
+						<img src="http://placehold.it/430x280"/>
+					</div>
+			</section>
+			<aside id="main-aside">
+				<div class="aside-list">
+					<ul>
+                        <li><a href="patient_list.html">환자 정보 리스트</a></li>
+						<li><a href="image_viewer.html">이미지 Viewer</a></li>
+						<li><a href="patient_register.html">신규 환자 등록</a></li>
+					</ul>
+				</div>
+			</aside>
+		</div>
+	<body>
+	<script>
+		includeHTML();
+	</script>
+</html>
+
